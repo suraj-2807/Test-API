@@ -26,11 +26,8 @@ app.post('/lookup-din', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log(`DIN lookup server running on port ${PORT}`);
-});
+const PORT = process.env.PORT || 3000; // use Render's assigned port
+app.listen(PORT, () => console.log(`DIN lookup server running on port ${PORT}`));
 
 app.get('/', (req, res) => {
   res.send('DIN Lookup API is running!');
